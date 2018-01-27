@@ -12,7 +12,7 @@ export class AppComponent {
 
   onClick(event: any) {
     this.display = !this.display;
-    this.count += 1;
-    this.msgs.push(this.count);
+    // this.count += 1;
+    this.msgs.push(new Date());
   }
 }

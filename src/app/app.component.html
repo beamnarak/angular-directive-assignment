@@ -3,8 +3,10 @@
     <div class="col-lg-6">
       <button class="btn btn-primary" (click)="onClick($event)">Display Detail</button>
       <p *ngIf="display">The Password is 2Tunas</p>
-      <p *ngFor="let msg of msgs" [ngStyle]="{backgroundColor: msg >= 5 ? 'blue': 'white'}" [ngClass]="{white: msg >= 5}">
-        {{ msg }}
+      <p *ngFor="let msg of msgs; let i = index" 
+        [ngStyle]="{backgroundColor: i >= 4 ? 'blue': 'white'}" 
+        [ngClass]="{white: i >= 4}">
+        {{i+1}} : {{ msg }}
       </p>
     </div>
   </div>
